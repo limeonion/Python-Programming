@@ -4,12 +4,13 @@ url = https://www.hackerrank.com/challenges/py-set-discard-remove-pop/problem?h_
 '''
 n = int(input())
 s = set(map(int, input().split()))
-
-for i in range(n):
-    cmd = list(input().split(' '))
-    if (len(cmd) == 1):
-        s.pop()
-    else:
-        value = int(cmd[1])
-        s.discard(value)
+N = int(input())
+for i in range(N):
+    cmd = input().split()
+    if cmd[0] == 'remove':
+        s.remove(int(cmd[1]))
+    elif cmd[0] == 'pop':
+        temp = s.pop()
+    elif cmd[0] == 'discard':
+        s.discard(int(cmd[1]))
 print(sum(s))
