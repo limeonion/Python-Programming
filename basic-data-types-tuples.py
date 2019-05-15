@@ -3,7 +3,6 @@ url= https://www.hackerrank.com/challenges/python-tuples/problem?h_r=next-challe
 '''
 
 
-if __name__ == '__main__':
-    n = int(input())
-    integer_list = map(int, input().split())
-    print(hash(tuple(integer_list)))
+n = int(input())
+integer_list = map(int, input().split())
+print(hash(tuple(integer_list)))
